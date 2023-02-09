@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info bg-gradient">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand">
           LMS
         </a>
         <button
@@ -19,62 +20,48 @@ const Navbar = (props) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link to="/" className="nav-link active" aria-current="page">
 
               {props.Home}
               
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="/About" className="nav-link" >
 
-                {props.StudentServices}
+                {props.About}
 
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                {props.Courses}
-
-              </a>
+              </Link>
             </li>
 
 
-            <li className="nav-item dropdown">
-            <a
-              className="nav-link"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              {props.Courses}
+            <li className="nav-item">
+            <Link to="/ContactUs" className="nav-link" >
 
-            </a>
+              {props.Contact}
+
+            </Link>
           </li>
-          <li className="nav-item dropdown">
-          <a
-            className="nav-link"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {props.Courses}
 
-          </a>
+          <li className="nav-item">
+          <Link to="/Login" className="nav-link" >
+
+            {props.Login}
+
+          </Link>
         </li>
+
+
+        <li className="nav-item">
+        <Link to="/Signup" className="nav-link" >
+
+          {props.Signup}
+        </Link>
+      </li>
+
+
 
           </ul>
           <form className="d-flex">
